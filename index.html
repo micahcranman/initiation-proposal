@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Initiation × Acraya — Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#111010;
+    --ink:#1c1a18;
+    --body:#403b36;
+    --grey:#8a8279;
+    --rule:#e7e1d8;
+    --cream:#faf7f2;
+    --gold:#c1963f;
+    --gold-soft:#e8dcc2;
+    --max:820px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+  b{color:var(--ink)}
+  .gold{color:var(--gold)}
+
+  /* header band */
+  .band{background:var(--dark);color:#efe9df;padding:84px 0 76px;position:relative;overflow:hidden}
+  .band::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(193,150,63,.22),transparent 46%);pointer-events:none}
+  .band .wrap{position:relative}
+  .band .label{font-size:11px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+  .band h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,5.2vw,54px);line-height:1.08;letter-spacing:.005em;color:#fff}
+  .band h1 .em{color:var(--gold);font-weight:600;font-style:italic}
+  .band .sub{margin-top:22px;font-size:18px;color:#c7bfb2;max-width:34em}
+  .band .meta{margin-top:30px;font-size:13px;letter-spacing:.06em;color:#8f887c}
+
+  main{padding-bottom:96px}
+  section{padding:52px 0 4px}
+  .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .eyebrow .n{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);font-weight:600;font-style:italic}
+  .eyebrow h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:29px;letter-spacing:.01em;color:var(--ink);line-height:1.1}
+  .eyebrow .line{flex:1;height:1px;background:var(--rule)}
+  p + p{margin-top:14px}
+  .lead{font-size:19px;color:var(--ink)}
+
+  /* solution callout */
+  .solution{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:30px 32px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  .solution .tag{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .solution + .solution{margin-top:16px}
+
+  /* price chip */
+  .price{display:inline-flex;align-items:baseline;gap:8px;background:var(--dark);color:#fff;border-radius:999px;padding:7px 18px;font-weight:700;letter-spacing:.02em}
+  .price .amt{color:var(--gold)}
+  .price .fine{font-weight:300;font-size:13px;color:#b7b0a4;letter-spacing:0}
+
+  /* metaphor row */
+  .meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+  .meta-grid .cell{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:18px 16px;text-align:center}
+  .meta-grid svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.5;margin-bottom:8px}
+  .meta-grid .k{font-weight:700;color:var(--ink);font-size:15px}
+  .meta-grid .v{font-size:13px;color:var(--grey);margin-top:2px}
+
+  /* paths */
+  .paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+  .path{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:22px 22px;position:relative;transition:.15s}
+  .path.feature{border-color:var(--gold);box-shadow:0 6px 24px rgba(193,150,63,.13)}
+  .path .ic{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.4;margin-bottom:12px}
+  .path h4{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.15}
+  .path p{font-size:14.5px;color:var(--body);margin:0}
+  .path .badge{position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);padding:4px 9px;border-radius:999px}
+  .path .free{color:var(--gold);background:var(--gold-soft)}
+
+  /* deal */
+  .deal{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:20px;border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:#fff}
+  .deal .col{padding:24px 22px}
+  .deal .col + .col{border-left:1px solid var(--rule)}
+  .deal .h{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .deal .col p{font-size:14.5px;margin:0}
+
+  .why{margin-top:22px;padding:22px 26px;background:var(--dark);color:#e7e1d5;border-radius:14px;font-size:16px}
+  .why b{color:#fff}
+
+  .note{font-size:14px;color:var(--grey);margin-top:14px;font-style:italic}
+
+  ul.steps{list-style:none;margin-top:14px;counter-reset:s}
+  ul.steps li{padding:10px 0 10px 40px;position:relative;border-top:1px solid var(--rule)}
+  ul.steps li:first-child{border-top:none}
+  ul.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:9px;width:26px;height:26px;border-radius:50%;background:var(--gold-soft);color:var(--gold);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+
+  footer{border-top:1px solid var(--rule);margin-top:64px;padding:30px 0 72px;font-size:12px;letter-spacing:.06em;color:var(--grey);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  @media(max-width:620px){
+    .meta-grid,.deal,.paths{grid-template-columns:1fr}
+    .deal .col + .col{border-left:none;border-top:1px solid var(--rule)}
+  }
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="wrap">
+    <div class="label">Proposal · For Ian · July 2026</div>
+    <h1>Initiation: the solution for onboarding, orientation, and <span class="em">community management.</span></h1>
+    <p class="sub">One program that prepares clients, holds the community, and opens a new revenue line — built and run entirely by us.</p>
+    <div class="meta">MICAH · ALLEN · SEVERIN</div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section>
+    <div class="eyebrow"><span class="n">I</span><h2>The problem</h2><span class="line"></span></div>
+    <p class="lead">Beyond the facilitator network, there's no real system to orient clients, hold an ongoing community, support preparation and integration, and — most importantly — <b>upsell them on facilitation.</b></p>
+    <p>Clients need to understand why facilitation matters and what skills a dark retreat demands. Building that internally means staff and ongoing management Acraya can't justify right now. This is the most elegant way to solve it.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">II</span><h2>The solution</h2><span class="line"></span></div>
+    <div class="solution">
+      <div class="tag">Free · always included</div>
+      <p>A short <b>"mini-course"</b> — the map of the territory — orienting every client to the dark retreat and the skills to navigate it safely.</p>
+    </div>
+    <div class="solution">
+      <div class="tag">Optional · paid</div>
+      <p><b>Initiation</b> — a self-study + group-based preparation &amp; integration program. It's the natural upsell path to facilitation <span class="gold">("I need more preparation")</span>, or a budget-friendly route for clients who won't book 1:1.</p>
+    </div>
+    <p style="margin-top:18px">The whole framework is <b>non-denominational and non-dogmatic</b> — built around the dynamics a client actually experiences in the dark, compatible with any lineage or method rather than competing with one.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">III</span><h2>What Initiation is</h2><span class="line"></span></div>
+    <p>Over the past several months we've built a full curriculum around the dark retreat, expressed as an <b>initiation process</b> — a hero's journey by ship. You set out to seek treasure, only to discover the transformation itself is the treasure.</p>
+    <p>Each leg of the voyage maps onto real inner work — the crew is the parts of us that surface, the crow's nest is awareness practice, and the cargo is the beliefs and identity we carry. The journey is the container; the change that happens inside it is the point.</p>
+    <div class="meta-grid">
+      <div class="cell">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+        <div class="k">The crew</div><div class="v">parts work</div>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.5 5H9.5z"/><path d="M12 8v13"/><path d="M6 21h12"/></svg>
+        <div class="k">The crow's nest</div><div class="v">awareness practice</div>
+      </div>
+      <div class="cell">
+        <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="1"/><path d="M4 12h16M12 8v11"/></svg>
+        <div class="k">The cargo</div><div class="v">beliefs &amp; identity</div>
+      </div>
+    </div>
+    <p style="margin-top:20px">A client who buys it gets a <b>self-study online course</b> — the map of what happens psychologically in darkness, how to work with the parts of themselves that surface, and a concrete protocol for regulating through intense moments in the dark — plus <b>weekly live group calls</b>, before the retreat for preparation and after it for integration. We run these ourselves to start.</p>
+    <p>This isn't theoretical, and we're not learning on the job. The path and the metaphor are ours to build, but the tools and the approach are fundamentally <b>Severin's</b> — refined across thousands of hours of guiding real people through the dark. We're taking an experience that already works and packaging it for Acraya's context: the same frameworks we're bringing into the study, delivered in a form optimized for your clients.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">IV</span><h2>The four paths</h2><span class="line"></span></div>
+    <p>Today a client's preparation depends entirely on whether they book 1:1. Initiation fills the gap without touching the facilitation business.</p>
+    <div class="paths">
+      <div class="path feature">
+        <span class="badge free">Free</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
+        <h4>Intro + orientation</h4>
+        <p>The "map of the territory," included with every booking at no cost.</p>
+      </div>
+      <div class="path feature">
+        <span class="badge">$695</span>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="12" cy="6" r="2.5"/><path d="M12 8.5V21M12 21c-3 0-5-2-5-5M12 21c3 0 5-2 5-5M6 12H4M20 12h-2"/></svg>
+        <h4>Self-study + group calls</h4>
+        <p>The Initiation program. For clients who won't book 1:1 — today they get nothing.</p>
+      </div>
+      <div class="path">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 3s6 3 6 7c0 5-6 11-6 11S6 15 6 10c0-4 6-7 6-7z"/><circle cx="12" cy="10" r="2"/></svg>
+        <h4>1:1 — Acraya facilitator</h4>
+        <p>Exactly as today. Nothing changes.</p>
+      </div>
+      <div class="path">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16M7 7l10 10M17 7L7 17"/></svg>
+        <h4>1:1 — Initiation-trained</h4>
+        <p>Later phase: facilitators we certify in the framework.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">V</span><h2>The deal</h2><span class="line"></span></div>
+    <div class="deal">
+      <div class="col"><div class="h">We do</div><p>Build the course, run the calls, handle platform, payments, and support. All costs ours.</p></div>
+      <div class="col"><div class="h">Acraya does</div><p>Includes the free intro with every booking and offers the program alongside facilitation.</p></div>
+      <div class="col"><div class="h">Acraya gets</div><p>Commission on every sale, plus individual-session revenue flowing out of the group container.</p></div>
+    </div>
+    <div style="margin-top:16px"><span class="price">Add-on <span class="amt">$695</span> <span class="fine">price flexible · commission % set together</span></span></div>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">VI</span><h2>What Acraya gets</h2><span class="line"></span></div>
+    <div class="why">Revenue on bookings that today produce nothing beyond the room, <b>better-prepared clients</b> — safer retreats, better outcomes, the thing the brand stakes itself on — and a program tied to the study <b>no other operator can claim.</b></div>
+    <p style="margin-top:16px">The group calls also surface clients who want to go deeper — a natural referral into 1:1 work with your facilitators, not away from them.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">VII</span><h2>Bigger than the offer</h2><span class="line"></span></div>
+    <p><b>Better for the study.</b> Running the condensed program with the first study participants (pending Harlin's approval) means they arrive better prepared and supported — improving both their experience and the reliability of the results.</p>
+    <p style="margin-top:14px"><b>A path to facilitator training.</b> Once the model is proven, we'd have three things almost no one can assemble at once: a proven client program, a real revenue path for facilitators, and the credibility of a first-of-its-kind study. That makes facilitator training something people want to buy into — another durable revenue line for Acraya.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="n">VIII</span><h2>Next steps</h2><span class="line"></span></div>
+    <ul class="steps">
+      <li>Agree in principle.</li>
+      <li>Together we determine price and commission split.</li>
+      <li>We run the condensed beta with the first study participants.</li>
+      <li>We expand the beta into the full program based on what we learn.</li>
+      <li>Full rollout: intro in every booking, program open to all clients.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>INITIATION × ACRAYA</span>
+    <span>MICAH · ALLEN · SEVERIN</span>
+  </footer>
+
+</main>
+
+</body>
+</html>
