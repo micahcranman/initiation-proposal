@@ -81,6 +81,14 @@
   .why{margin-top:22px;padding:22px 26px;background:var(--dark);color:#e7e1d5;border-radius:14px;font-size:16px}
   .why b{color:#fff}
 
+  /* what initiation is */
+  .ship-scene{margin:24px 0 4px;border:1px solid var(--rule);border-radius:16px;overflow:hidden;background:#0a0806}
+  .ship-scene svg{display:block;width:100%;height:auto}
+  .ship-scene figcaption{font-size:13px;color:var(--grey);font-style:italic;padding:12px 18px;background:#fff;border-top:1px solid var(--rule)}
+  .proof{margin-top:16px;display:flex;gap:18px;align-items:flex-start;background:var(--dark);color:#e7e1d5;border-radius:14px;padding:24px 26px;border-left:3px solid var(--gold);font-size:16px}
+  .proof .ic{flex:0 0 auto;width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.5;margin-top:2px}
+  .proof b{color:#fff}
+
   .note{font-size:14px;color:var(--grey);margin-top:14px;font-style:italic}
 
   ul.steps{list-style:none;margin-top:14px;counter-reset:s}
@@ -130,24 +138,88 @@
 
   <section>
     <div class="eyebrow"><span class="n">III</span><h2>What Initiation is</h2><span class="line"></span></div>
-    <p>Over the past several months we've built a full curriculum around the dark retreat, expressed as an <b>initiation process</b> — a hero's journey by ship. You set out to seek treasure, only to discover the transformation itself is the treasure.</p>
-    <p>Each leg of the voyage maps onto real inner work — the crew is the parts of us that surface, the crow's nest is awareness practice, and the cargo is the beliefs and identity we carry. The journey is the container; the change that happens inside it is the point.</p>
-    <div class="meta-grid">
-      <div class="cell">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
-        <div class="k">The crew</div><div class="v">parts work</div>
+    <p>Over the past several months we've built a full curriculum around the dark retreat, framed as a <b>metaphorical hero's journey by ship</b>. The voyage is a story clients use to navigate the experience — not a doctrine to believe or a lineage to join. You set out to seek treasure, only to discover the transformation itself is the treasure. Every part of the ship stands for real inner work: the <b>crew</b> is the parts of us that surface in the dark, the <b>crow's nest</b> is awareness practice, and the <b>cargo</b> is the beliefs and identity we've been carrying. The journey is the container; the change that happens inside it is the point.</p>
+
+    <figure class="ship-scene">
+      <svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A captain at the helm of a sailing ship in a storm">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0d0a06"/><stop offset=".55" stop-color="#1b140c"/><stop offset="1" stop-color="#0a0705"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="70%" cy="26%" r="46%">
+            <stop offset="0" stop-color="#c1963f" stop-opacity=".55"/><stop offset=".45" stop-color="#c1963f" stop-opacity=".12"/><stop offset="1" stop-color="#c1963f" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#12191c"/><stop offset="1" stop-color="#05090a"/>
+          </linearGradient>
+          <pattern id="rain" width="22" height="38" patternTransform="rotate(13)" patternUnits="userSpaceOnUse">
+            <line x1="1" y1="0" x2="1" y2="20" stroke="#cdbfa4" stroke-opacity=".10" stroke-width="1"/>
+          </pattern>
+          <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+            <stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/>
+          </radialGradient>
+        </defs>
+        <rect width="800" height="380" fill="url(#sky)"/>
+        <rect width="800" height="380" fill="url(#glow)"/>
+        <circle cx="566" cy="98" r="36" fill="#e9d9b0" opacity=".85"/>
+        <g fill="#0e0b07" opacity=".9">
+          <path d="M470,70 Q520,40 590,58 Q660,44 700,78 Q720,110 660,116 Q560,132 470,112 Q440,92 470,70 Z"/>
+          <path d="M120,64 Q200,36 300,58 Q360,44 420,70 Q380,104 300,98 Q200,110 120,92 Q100,76 120,64 Z"/>
+        </g>
+        <g fill="#080604" opacity=".85"><path d="M0,30 Q120,10 260,34 Q380,16 520,36 Q660,20 800,40 L800,0 L0,0 Z"/></g>
+        <rect width="800" height="300" fill="url(#rain)"/>
+        <path d="M0,250 C120,232 220,296 340,284 C470,270 560,314 800,292 L800,380 L0,380 Z" fill="url(#sea)"/>
+        <g transform="translate(322,236) rotate(-7)">
+          <g stroke="#080604" stroke-width="4" stroke-linecap="round">
+            <line x1="-42" y1="6" x2="-42" y2="-118"/><line x1="44" y1="8" x2="44" y2="-150"/>
+          </g>
+          <g fill="#0c0906">
+            <path d="M-42,-112 C-8,-107 -4,-80 -42,-76 Z"/><path d="M-42,-72 C6,-64 10,-30 -42,-26 Z"/>
+            <path d="M44,-142 C86,-136 90,-102 44,-98 Z"/><path d="M44,-94 C96,-86 100,-40 44,-34 Z"/>
+          </g>
+          <path d="M44,-150 L70,-145 L44,-140 Z" fill="#c1963f"/>
+          <path d="M118,-8 L170,-26" stroke="#080604" stroke-width="3" stroke-linecap="round"/>
+          <path d="M120,-10 L162,-24 L124,-30 Z" fill="#0c0906"/>
+          <path d="M-118,-6 C-122,20 -90,36 -58,38 L58,38 C96,36 124,18 118,-8 L98,2 C58,14 -58,14 -98,2 Z" fill="#090705"/>
+          <path d="M-98,2 C-58,14 58,14 98,2" fill="none" stroke="#c1963f" stroke-opacity=".35" stroke-width="1.5"/>
+          <circle cx="-70" cy="-4" r="9" fill="none" stroke="#1a140d" stroke-width="2"/>
+          <g stroke="#1a140d" stroke-width="1.5">
+            <line x1="-79" y1="-4" x2="-61" y2="-4"/><line x1="-70" y1="-13" x2="-70" y2="5"/>
+            <line x1="-76" y1="-10" x2="-64" y2="2"/><line x1="-64" y1="-10" x2="-76" y2="2"/>
+          </g>
+          <circle cx="-58" cy="-24" r="4.2" fill="#050403"/>
+          <path d="M-62,-20 C-64,-11 -62,-2 -58,-2 C-54,-2 -52,-11 -54,-20 Z" fill="#050403"/>
+        </g>
+        <path d="M0,296 C150,282 250,330 390,320 C520,311 650,342 800,322 L800,380 L0,380 Z" fill="#05080a"/>
+        <path d="M0,296 C150,282 250,330 390,320 C520,311 650,342 800,322" fill="none" stroke="#c1963f" stroke-opacity=".25" stroke-width="1.5"/>
+        <path d="M0,250 C120,232 220,296 340,284 C470,270 560,314 800,292" fill="none" stroke="#cdbfa4" stroke-opacity=".12" stroke-width="1.5"/>
+        <g fill="#cdbfa4" opacity=".18">
+          <circle cx="250" cy="316" r="2"/><circle cx="262" cy="308" r="1.5"/><circle cx="238" cy="310" r="1.5"/>
+          <circle cx="410" cy="320" r="2"/><circle cx="398" cy="312" r="1.5"/>
+        </g>
+        <rect width="800" height="380" fill="url(#vig)"/>
+      </svg>
+      <figcaption>A metaphor, not a belief system — the client, steady at the helm, learning to sail their own storm.</figcaption>
+    </figure>
+
+    <p style="margin-top:22px">A client who buys it gets two things:</p>
+    <div class="paths">
+      <div class="path">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 1 1.5 1.5z"/><path d="M11 4.5v15M13 4.5v15"/></svg>
+        <h4>Self-study online course</h4>
+        <p>The map of what happens psychologically in darkness, how to work with the parts that surface, and a concrete protocol for regulating through intense moments in the dark.</p>
       </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24"><path d="M12 3l2.5 5H9.5z"/><path d="M12 8v13"/><path d="M6 21h12"/></svg>
-        <div class="k">The crow's nest</div><div class="v">awareness practice</div>
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="1"/><path d="M4 12h16M12 8v11"/></svg>
-        <div class="k">The cargo</div><div class="v">beliefs &amp; identity</div>
+      <div class="path">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5"/><path d="M16 5.5a3 3 0 0 1 0 5.5M17.5 15.5c2 .5 3.5 2 3.5 4.5"/></svg>
+        <h4>Weekly live group calls</h4>
+        <p>Before the retreat for preparation, after it for integration — a held container, not a video library. We run these ourselves to start.</p>
       </div>
     </div>
-    <p style="margin-top:20px">A client who buys it gets a <b>self-study online course</b> — the map of what happens psychologically in darkness, how to work with the parts of themselves that surface, and a concrete protocol for regulating through intense moments in the dark — plus <b>weekly live group calls</b>, before the retreat for preparation and after it for integration. We run these ourselves to start.</p>
-    <p>This isn't theoretical, and we're not learning on the job. The path and the metaphor are ours to build, but the tools and the approach are fundamentally <b>Severin's</b> — refined across thousands of hours of guiding real people through the dark. We're taking an experience that already works and packaging it for Acraya's context: the same frameworks we're bringing into the study, delivered in a form optimized for your clients.</p>
+
+    <div class="proof">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z"/></svg>
+      <div>This isn't theoretical, and we're not learning on the job. The path and the metaphor are ours to build, but the tools and the approach are fundamentally <b>Severin's</b> — refined across thousands of hours of guiding real people through the dark. We're taking an experience that already works and packaging it for Acraya's context: the same frameworks we're bringing into the study, delivered in a form optimized for your clients.</div>
+    </div>
   </section>
 
   <section>
